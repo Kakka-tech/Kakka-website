@@ -8,7 +8,7 @@ export interface ContactFormData {
   budget?: string
 }
 
-export interface ApiResponse<T = any> {
+export interface ApiResponse<T = unknown> {
   data?: T
   error?: {
     status: number
@@ -19,7 +19,7 @@ export interface ApiResponse<T = any> {
 
 export async function submitContactForm(
   formData: ContactFormData,
-): Promise<ApiResponse> {
+): Promise<ApiResponse<Record<string, unknown>>> {
   try {
     const response = await fetch(`${API_URL}/api/requests`, {
       method: 'POST',
