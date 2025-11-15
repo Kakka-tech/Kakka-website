@@ -122,7 +122,14 @@ export default function Footer() {
 
         <div className="border-t border-gray-200">
           <div className="text-center py-4 text-gray-600 text-xs">
-            © {new Date().getFullYear()} <span className="font-semibold">KAKKA</span>. All rights reserved.
+            © {new Date().getFullYear()}{" "}
+            <span className="font-semibold">KAKKA</span>. All rights reserved. ·{" "}
+            <a
+              href="/legal-notice"
+              className="underline hover:text-gray-800 transition"
+            >
+              Legal Notice
+            </a>
           </div>
         </div>
       </div>
